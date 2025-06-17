@@ -1,0 +1,315 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: #F5E6D3;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+li, a, button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+
+}
+header {
+    display: flex;
+    justify-content:flex-end;/*Just like the flex cheat sheet it makes all of them to the right at the end */
+    align-items: center;
+    padding: 20px 5%;
+}
+.left-part{
+    display: flex;
+    align-items: center;
+    margin-right: auto;/* This keeps it on the left because u put the header justify content is flex end but if it was flex start we would say left */
+}
+.brand{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0px 20px;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: transparent;
+
+}
+
+.logo{
+  cursor: pointer;/*This makes the mouse a cursor when we touch the button*/
+  width:50px;
+  height: auto;
+  
+}
+.nav_links {
+    list-style:none;
+}
+.nav_links li{
+    display:inline-block; /* broski this makes the nav links side by side instead of under each other*/
+    padding: 0px 20px;
+}
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    border-radius: 15px;
+}
+.nav_links li a:hover {
+    color:maroon ;
+    letter-spacing: 0.5px; 
+    transform: scale(1.05);
+}
+.active {
+    background-color:#B76E79 ;
+    padding:5px 10px
+    
+}
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border:none;
+    border-radius: 35px;
+    cursor:pointer;
+    transition: all 0.3s ease 0;
+}
+.btn-order :hover{
+    background-color: rgba(255, 255, 255, 0.8);/*The back ground color when we hover*/
+    color: rgb(0, 0, 0); /*The texts color when we hover*/
+    letter-spacing: 0.5px; 
+}
+.container{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.left-side{
+    flex: 0.8;
+    padding: 20px;
+    max-width: 45%;
+}
+.right-side{
+    flex: 1.2;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-div{
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+.img-div img {
+    width: 125%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.title {
+    font-size:4rem;
+    margin-top: -100px;
+}
+.sub-title{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.description{
+    font-size: 4rem;
+}
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    gap: 25px;
+    margin: 10px 0;
+}
+.social-links li{
+    display: inline-block;
+}
+.social-icon{
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease;
+}
+.social-icon:hover {
+    transform: scale(1.2);
+    cursor:pointer;
+}
+.right-part{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.right-text{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.best-seller{
+    font-size: 1.5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+}
+.order-now{
+        padding: 9px 25px;
+        background-color: rgba(0, 136, 169, 1);
+        border:none;
+        border-radius: 35px;
+        cursor:pointer;
+        transition: all 0.3s ease 0;
+}
+.order-now:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.5px; 
+    transform: scale(1.1);
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2%;
+    background-color:#f5f5f5;
+    }
+footer *,
+.left-footer,
+.left-footer .brand,
+.left-footer .logo
+.copyright p{
+    background-color: #f5f5f5;
+}
+.left-footer{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    
+}
+.footer-social{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.footer-social li{
+    display: inline-block;
+    padding: 0 1em;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5em;  
+    margin-top: 0.5em;
+    border-top: 1px solid #ddd;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav_links li {
+        padding: 0 10px;
+    }
+    .container {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+    .left-side {
+        max-width: 100%;
+        text-align: center;
+    }
+    .right-side {
+        padding: 20px;
+        width: 100%;
+    }
+    .img-div img {
+        width: 100%;
+    }
+    .title {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+    .description {
+        font-size: 2.5rem;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 30px 5%;
+        height: 85vh;
+    }
+    .left-side {
+        max-width: 50%;
+    }
+    .title {
+        font-size: 3.5rem;
+    }
+    .description {
+        font-size: 3rem;
+    }
+    .img-div img {
+        width: 110%;
+    }
+    .right-side {
+        padding: 20px;
+    }
+    footer {
+        bottom: 0;
+        width: 100%;
+        margin-top: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav_links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav_links li {
+        padding: 5px;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .description {
+        font-size: 1.5rem;
+    }
+    .sub-title {
+        font-size: 1rem;
+    }
+    .img-div {
+        margin-bottom: 10px;
+    }
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+  

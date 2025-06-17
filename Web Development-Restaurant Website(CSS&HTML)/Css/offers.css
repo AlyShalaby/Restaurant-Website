@@ -1,0 +1,129 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+h1, .offer-name{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 600;
+}
+.h1{
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+.deal-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.offer-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+.offer-name{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.offer-description, .price{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.offer-description{
+    font-size: 14px;
+    font-weight: 500;
+    color: #4b3535;
+}
+.price{
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+}
+.add-button {
+    background: #008B8B;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 80%;
+}
+.add-button:hover {
+    transform: scale(1.1);
+    background-color: #2C3E50;
+    letter-spacing: 0.5px;
+}
+.pic {
+    padding: 10px;
+    text-align: center;
+}
+.offer-img{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.pic {
+    padding: 10px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    main{
+        padding: 20px;
+        margin-top: 40px;
+        height: 100vh;
+        gap: 20px;
+    }
+    .deal-card {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .offer-img {
+        width: 350px;
+        height: 220px;
+    }
+    h1 {
+        margin-bottom: 30px;
+    }
+    footer {
+        margin-top: auto;
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .deal-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .offer-img {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-img {
+        height: 200px;
+    }
+    .offer-name {
+        font-size: 20px;
+    }
+    .add-button {
+        width: 100%;
+    }
+}
+ 
